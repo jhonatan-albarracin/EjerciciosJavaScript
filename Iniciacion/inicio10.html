@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio10</title>
+    </head>
+    <body>
+        <p>Operacion entre dos numeros</p>
+        <div id="resultado"></div>
+        <script>
+            let numero1, numero2;
+            numero1 = window.prompt("Primer numero: ", "0")
+            numero1 = parseInt(numero1);
+            numero2 = window.prompt("Segundo numero: ", "0");
+            numero2 = parseInt(numero2);
+            let resultado = numero1 - numero2;
+            document.getElementById("resultado").innerHTML = (`La resta es ${resultado}`)
+        </script>
+    </body>
+</html>
