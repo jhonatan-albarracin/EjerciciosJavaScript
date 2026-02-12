@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio4</title>
+    <script>
+        function calcular(){
+            let num = parseInt(document.getElementById("number").value);
+            let cuadrado = calcularCuadrado(num);
+            let cubo = calcularCubo(num);
+        }
+        function calcularCuadrado(num){
+            return num*num;
+        }
+        function calcularCubo(num){
+            return num*num*num;
+        }
+    </script>
+</head>
+<body>
+    <h1>Potencias</h1>
+    <br/>
+    <h2>Calcular Cuadrado y Cubo</h2>
+    <br/>
+    <input type="number" id="number" placeholder="Put a number">
+    <button onclick="calcularCuadrado()">Calcular</button>
+
+    <p id="resultadoCuadrado"></p>
+    <p id="resultadoCubo"></p>
+</body>
+</html>

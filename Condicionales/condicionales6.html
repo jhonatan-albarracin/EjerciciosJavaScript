@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio6</title>
+</head>
+
+<body>
+    <script>
+        let marca, modelo, descuento = 0;
+        marca = prompt("Marca?", "0");
+        modelo = prompt("Modelo?", "0");
+        if ((marca == "ford") && (modelo == "fiesta")) {
+            descuento = 5;
+        }
+        if ((marca == "ford") && (modelo == "focus")) {
+            descuento = 10;
+        }
+        if (descuento != 0){
+            document.writeln(`<h3>Su descuento es ${descuento} </h3>`);
+        }else{
+            document.writeln(`<h3>No es posible aplicar ningun tipo de descuento</h3>`)
+        }
+        
+    </script>
+</body>
+
+</html>
