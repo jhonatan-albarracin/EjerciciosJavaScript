@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio8</title>
+    <script>
+        function calcular(){
+            let numFahrenheit = document.getElementById("numFahrenheit").value;
+            let numCelsius = document.getElementById("numCelsius").value;
+            calcularCelsius(numCelsius){
+                let resultadoCelsius = numCelsius;
+                document.getElementById("resultadoCelsius").innerHTML = resultadoCelsius;
+            }
+            calcularFahrenheit(numFahrenheit){
+                let resultadoFahrenheit = numFahrenheit;
+                document.getElementById("resultadoFahrenheit").innerHTML = resultadoFahrenheit;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h2>Calcular Conversión</h2>
+    <h3>Calcular Celsius</h3>
+    <form>
+        Ingresa el valor en ºF a convertir: 
+        <input type="number" onchange="calcular()" id="numFahrenheit">
+        <p id="resultadoCelsius"></p>
+    </form>
+</body>
+</html>
