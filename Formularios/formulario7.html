@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Ejercicio7</title>
     <script>
-        function convertir(){
+        function convertir() {
             let valorCelsius = parseInt(document.getElementById("celsius").value);
-            let fahrenheit = valorCelsius *(9/5) + 32;
+            let fahrenheit = valorCelsius * (9 / 5) + 32;
 
             document.getElementById("resultado").innerHTML = fahrenheit;
         }
 
     </script>
 </head>
+
 <body>
     <h2>Conversión Celsius - Fahrenheit</h2>
     <form>
         Introduce el valor en ºC: <input type="number" id="celsius" size="5" onchange="convertir()" default="0">
-         Es equivalente a <b>ºF: </b>
-         <p id="resultado"></p>
+        Es equivalente a <b>ºF: </b>
+        <p id="resultado"></p>
 
     </form>
 </body>
+
 </html>

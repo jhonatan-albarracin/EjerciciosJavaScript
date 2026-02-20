@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Ejercicio8</title>
     <script>
-        function calcular(){
-            let numFahrenheit = document.getElementById("numFahrenheit").value;
-            let numCelsius = document.getElementById("numCelsius").value;
-            calcularCelsius(numCelsius){
-                let resultadoCelsius = numCelsius;
-                document.getElementById("resultadoCelsius").innerHTML = resultadoCelsius;
-            }
-            calcularFahrenheit(numFahrenheit){
-                let resultadoFahrenheit = numFahrenheit;
-                document.getElementById("resultadoFahrenheit").innerHTML = resultadoFahrenheit;
-            }
+
+        function calcularCelsius() {
+            let numFahrenheit = parseFloat(document.getElementById("numFahrenheit").value);
+            let resultadoCelsius = (numFahrenheit - 32) * 5 / 9;
+
+            document.getElementById("resultadoCelsius").innerHTML = resultadoCelsius.toFixed(2) + " ºC";
+        }
+        function calcularFahrenheit() {
+            let numCelsius = parseFloat(document.getElementById("numCelsius").value);
+            let resultadoFahrenheit = (numCelsius * 9 / 5) + 32;
+            document.getElementById("resultadoFahrenheit").innerHTML = resultadoFahrenheit.toFixed(2) + " ºF";;
         }
 
     </script>
 </head>
+
 <body>
     <h2>Calcular Conversión</h2>
-    <h3>Calcular Celsius</h3>
-    <form>
-        Ingresa el valor en ºF a convertir: 
-        <input type="number" onchange="calcular()" id="numFahrenheit">
-        <p id="resultadoCelsius"></p>
-    </form>
+    <div>
+        <h3>Calcular Celsius</h3>
+        <form onchange="calcularCelsius()" onsubmit="event.preventDefault()">
+            <label for="numFahrenheit">Ingresa el valor en ºF a convertir:</label>
+            <input type="number" id="numFahrenheit" step="any">
+            <p>El valor en <b>Celsius</b> es: <span id="resultadoCelsius">0 ºC</span></p>
+        </form>
+    </div>
+    <div>
+        <h3>Calcular Fahrenheit</h3>
+        <form onchange="calcularFahrenheit()" onsubmit="event.preventDefault()">
+            <label for="numCelsius">Ingresa el valor en ºC a convertir:</label>
+            <input type="number" id="numCelsius" step="any">
+            <p>El valor en <b>Fahrenheit</b> es: <span id="resultadoFahrenheit">0 ºF</span></p>
+        </form>
+    </div>
 </body>
+
 </html>

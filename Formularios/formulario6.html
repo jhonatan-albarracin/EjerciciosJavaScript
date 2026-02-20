@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Ejercicio6 - Entrada de Datos</title>
     <script>
-        function calcula(){
+        function calcula() {
             let numero = document.fdatos.entrada.value;
             let dato = document.getElementById("lista");
             let valor = dato.options[lista.selectedIndex].value; //.text
@@ -13,6 +14,7 @@
         }
     </script>
 </head>
+
 <body>
     <form name="fdatos">
         Introduce número: <input type="text" size="10" name="entrada">
@@ -26,4 +28,5 @@
     </form>
     <div id="salida"></div>
 </body>
+
 </html>
