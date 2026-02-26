@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio12</title>
+    <script>
+        function f() {
+            let solo_local = 100;
+            let z = solo_local;
+            // z es una variable de tipo local.
+            // con let solo existira z mientras se ejecuta la función f()
+
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        let x, y;
+        y = "Bon dia";
+        document.write(`<p>Este es el valor de x: ${x} <br></p>`);
+        document.write(`<h3>Este es el valor de y: ${y} </h3>`);
+        f();
+        //let z = f();
+        //podria mos devolver el valor desde la funcion con un return.
+        //o podriamos hacer la z una variable global dentro de la funcion.
+        //z = solo_local;
+        document.write(`<p>Este es el valor de z: +${z} <br></p>`);
+    </script>
+
+    <p><br>Las variables declaradas en la función (f) existen durante el tiempo de ejecución de la función. El resto son
+        variables globales.</p>
+</body>
+
+</html>

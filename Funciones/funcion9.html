@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio9</title>
+    <script>
+        function suma() {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+            let suma = num1 + num2;
+            return document.getElementById("resultado").innerHTML = "La suma es: " + suma;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Suma de dos números</h1>
+    <p>
+        Ingresa dos números para realizar una suma.
+    </p>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <p id="resultado"></p>
+    <button onclick="suma();">Calcular</button>
+</body>
+
+</html>
